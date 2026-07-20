@@ -22,9 +22,7 @@ function App() {
         <h1>CC 106 Dashboard Engine</h1>
 
         <button onClick={() => setIsLive(!isLive)}>
-          {isLive
-            ? "⏹ Stop Live Streams"
-            : "▶️ Resume Live Streams"}
+          {isLive ? "⏹ Stop Live Streams" : "▶️ Resume Live Streams"}
         </button>
       </header>
 
@@ -33,6 +31,7 @@ function App() {
           display: "flex",
           gap: "1rem",
           marginTop: "2rem",
+          flexWrap: "wrap",
         }}
       >
         <MetricCard
@@ -46,12 +45,24 @@ function App() {
           value={isLive ? "Ingesting" : "Paused"}
           status={isLive ? "optimal" : "warning"}
         />
+
+        <MetricCard
+          title="IoT Edge Ingestion Rate"
+          value="1,200 req/sec"
+          status="warning"
+        />
       </div>
 
-      <div style={{ marginTop: "2rem" }}>
+      <div
+        style={{
+          marginTop: "2rem",
+        }}
+      >
         <button
           onClick={() => setNodeCount((prev) => prev + 1)}
-          style={{ marginRight: "10px" }}
+          style={{
+            marginRight: "10px",
+          }}
         >
           ⚡ Provision New Node
         </button>
