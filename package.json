@@ -8,5 +8,18 @@
   },
   "dependencies": {
     "express": "^5.2.1"
-  }
+  },
+  "description": "\\# CC106 Workspace",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlolouis/cc106-workspace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlolouis/cc106-workspace/issues"
+  },
+  "homepage": "https://github.com/carlolouis/cc106-workspace#readme"
 }
